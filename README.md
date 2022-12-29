@@ -16,7 +16,7 @@ Example:
 
 ## Determine version
 
-To determine which version to upgrade to, use:
+To determine which versions are available, use:
 
 ```bash
 sudo apt-get update && \

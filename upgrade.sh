@@ -15,5 +15,10 @@ kubeadm upgrade plan
 
 kubeadm upgrade apply v$VERSION
 
+sudo apt-mark unhold kubelet kubectl && \
+sudo apt-get update && \
+sudo apt-get install -y kubelet=$VERSION-00 kubectl=$VERSION-00 && \
+sudo apt-mark hold kubelet kubectl
+
 sudo systemctl daemon-reload
 sudo systemctl restart kubelet
